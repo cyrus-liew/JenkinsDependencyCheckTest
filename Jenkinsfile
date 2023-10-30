@@ -1,5 +1,8 @@
 pipeline {
 	agent any
+	environment {
+        	GIT_CREDENTIALS = credentials('GitAccessToken') // Reference your credentials ID
+   	}
 	stages {
 		stage('Checkout SCM') {
 			steps {
